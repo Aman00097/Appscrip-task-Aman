@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --dark-color: #252020;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+
+/* Header Component CSS Start */
+header {
+    width: 100%;
+    color: #EB4C6B;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.4px;
+    letter-spacing: 1px;
+}
+
+header>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #000;
+    padding: 10px;
+}
+
+header>div p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+header nav {
+    border-bottom: 1px solid #E5E5E5
+}
+
+header nav #top-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    color: var(--dark-color);
+}
+
+header nav #top-nav div {
+    width: 53%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav #top-nav div span {
+    display: none;
+}
+
+header nav #top-nav img {
+    width: 30px;
+    cursor: pointer;
+}
+
+header nav #top-nav h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 43.57px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+header nav #top-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+}
+
+header nav #top-nav ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+header nav ul#bottom-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+header nav #bottom-nav li {
+    list-style: none;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+header nav ul#bottom-nav #cross {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+header nav p {
+    display: none;
+}
+
+@media (max-width:600px) {
+    header>div p:first-child, header>div p:last-child {
+        display: none;
+    }
+
+    header nav #top-nav div span {
+        display: block;
+    }
+
+    header nav #top-nav {
+        padding: 10px;
+    }
+
+    header nav #top-nav div {
+        width: 70%;
+    }
+
+    header nav #top-nav ul {
+        gap: 5px;
+    }
+
+    header nav #top-nav ul li:nth-child(4), header nav #top-nav ul li:nth-child(5) {
+        display: none;
+    }
+
+    header nav ul#bottom-nav #cross {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    header nav ul#bottom-nav {
+        display: none;
+    }
+
+    header nav p {
+        display: block;
+    }
+
+    header nav ul#bottom-nav.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 100;
+    }
+}
+
+/* Header Component CSS End */
+
+
+/* Main Component CSS Start */
+main {
+    padding: 50px;
+}
+
+main section:first-child {
+    width: 700px;
+    height: 168px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+main section:first-child h1 {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 72px;
+    letter-spacing: 1px;
+}
+
+main section:first-child p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+main section:last-child>div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #E5E5E5;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 10px 0;
+    position: relative;
+}
+
+main section:last-child>div:first-child #recommendOption {
+    display: flex;
+    width: 200px;
+    height: 180px;
+    position: absolute;
+    right: -20px;
+    top: 20px;
+    background-color: transparent;
+    font-size: 14px;
+}
+
+main section:last-child>div:first-child #recommendOption ul {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    background-color: #fff;
+    box-shadow: 0 0 5px #000;
+    margin-top: auto;
+}
+
+main section:last-child>div:first-child #recommendOption li {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: '10px';
+}
+
+main section:last-child>div:first-child #recommendOption li:hover {
+    background-color: #eee;
+    width: 100%;
+}
+
+main section:last-child>div:first-child #recommendOption li.active {
+    width: 100%;
+    font-weight: bold;
+}
+
+main section:last-child>div p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 40px;
+    gap: 5px;
+}
+
+main section:last-child>div:last-child {
+    padding: 20px 0;
+    display: flex;
+    gap: 20px;
+}
+
+main section:last-child div:last-child aside {
+    width: 25%;
+    min-width: 180px;
+}
+
+main section:last-child div:last-child aside div {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 5px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21.6px;
+    text-transform: uppercase;
+}
+
+/* main section:last-child div:last-child aside div:first-child {
+    flex-direction: row;
+    align-items: center;
+} */
+
+main section:last-child div:last-child aside div input[type=checkbox] {
+    zoom: 1.3;
+    cursor: pointer;
+}
+
+main section:last-child div:last-child aside div p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+}
+
+main section:last-child div:last-child aside div li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+/* main section:last-child div:last-child aside div select {
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+} */
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#products div {
+    width: 250px;
+}
+
+#products div img {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #eee;
+    padding: 10px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+#products div h3 {
+    white-space: nowrap;
+    width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+#products div h4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#products div h4 span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#filter-mobile {
+    display: none;
+}
+
+@media (max-width:850px) {
+    main section:last-child div:last-child aside {
+        width: 20%;
+    }
+}
+
+@media (max-width:600px) {
+    main {
+        padding: 10px;
+    }
+
+    main section:first-child {
+        width: auto;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    main section:first-child h1 {
+        font-size: 22px;
+    }
+
+    main section:first-child p {
+        font-size: 16px;
+    }
+
+    main section:last-child>div:first-child {
+        display: none;
+    }
+
+    #filter-laptop {
+        display: none;
+    }
+
+    #filter-mobile {
+        display: flex;
+        justify-content: space-evenly;
+        border: 1px solid #ccc;
+        border-left: none;
+        border-right: none;
+    }
+
+    #filter-mobile p {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #filter-mobile #recommendOption {
+        display: flex;
+        width: 210px;
+        height: 180px;
+        position: absolute;
+        bottom: 180px;
+        right: 10px;
+        background-color: transparent;
+        font-size: 14px;
+        z-index: 500;
+    }
+
+    #filter-mobile #recommendOption ul {
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        background-color: #fff;
+        box-shadow: 0 0 5px #000;
+        margin-top: auto;
+    }
+
+    #filter-mobile #recommendOption li {
+        list-style: none;
+        cursor: pointer;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: '10px';
+    }
+
+    #filter-mobile #recommendOption li:hover {
+        background-color: #eee;
+        width: 100%;
+    }
+
+    #filter-mobile #recommendOption li.active {
+        width: 100%;
+        font-weight: bold;
+    }
+
+    main section:last-child>div:last-child {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+    }
+
+    main section:last-child div:last-child aside {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        background: #fff;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        box-shadow: 0 0 5px #000;
+    }
+
+    #products div {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+
+/* Main Component CSS End */
+
+
+/* Footer Component CSS Start */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 80px 150px;
+}
+
+footer section {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+footer section:first-child div {
+    width: 45%;
+}
+
+footer section div ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+footer section div ul h5 {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+footer section div ul li {
+    list-style: none;
+    font-size: 14px;
+}
+
+
+footer section:first-child input {
+    width: 60%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 50px;
+}
+
+footer section:first-child button {
+    width: 30%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #eee;
+    color: #eee;
+    cursor: pointer;
+}
+
+footer section:first-child img {
+    width: 20px;
+    border-radius: 50%;
+}
+
+footer section:last-child div {
+    width: 33%;
+}
+
+footer section:first-child div ul {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+footer section#last-section div ul {
+    margin-top: 30px;
+}
+
+footer section#last-section div ul div {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 7px;
+    margin-bottom: 30px;
+}
+
+footer section:last-child div ul div li {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+footer p {
+    text-align: center;
+}
+
+@media (max-width:850px) {
+    footer {
+        padding: 80px;
+    }
+}
+
+@media (max-width:600px) {
+    footer {
+        padding: 30px 10px;
+    }
+
+    footer section {
+        flex-direction: column;
+    }
+
+    footer section:first-child div {
+        width: 100%;
+        border-bottom: 2px solid #ccc;
+    }
+
+    footer section>div {
+        width: 100%;
+        border-bottom: 2px solid #ccc;
+    }
+
+    footer section:first-child input {
+        margin-top: 10px;
+    }
+}
+
+/* Footer Component CSS End */
